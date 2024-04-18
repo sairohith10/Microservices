@@ -1,0 +1,10 @@
+What are microservices?
+
+
+Microservices are an architectural approach to building applications that are distributed and loosely coupled so that a change in one microservice won’t break the entire app. 
+
+This lets development teams rapidly build new application components to meet changing business needs.
+
+A microservice consists of a single deployment, isolated from other deployments and processes, that supports a specific business function. 
+
+A collection of services constitutes a distributed system, where services consume and produce data for one another in the cloud.
