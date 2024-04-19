@@ -5,15 +5,15 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.4</version>
+		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.springex.microservice</groupId>
-	<artifactId>MicroserviceDemo1</artifactId>
+	<artifactId>MicroserviceDemo2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>MicroserviceDemo1</name>
-	<description>microservicesdemo</description>
+	<name>MicroserviceDemo2</name>
+	<description>microservicesdemo2</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
