@@ -18,33 +18,33 @@ import com.springex.microservice.service.AddressService;
 @RestController
 @RequestMapping("/address")
 public class AddressController {
-	
+
 	@Autowired
 	AddressService addressService;
 
 	@PostMapping("/savedetails")
 	public Address saveAddressDetails(@RequestBody AddressDetails addressDetails ) {
-		
+
 		Address address = new Address();
-		
+
 		address.setCity(addressDetails.getCity());
 		address.setStreet(addressDetails.getStreet());
-		  
+
 	return addressService.storeAddressDetails(address);
-		
-	
+
+
 	}
-	
+
 	@GetMapping("/getdetails")
 		public List<Address> getAllDetails() {
-			
+
 			return addressService.getallAddresses();
 		}
-	
-	
-	@GetMapping("id/{id}")
+
+
+	@GetMapping("/id/{id}")
 	 public Optional<Address> getDetailsById(@PathVariable long id) {
 		return addressService.getAddressById(id);
 	}
-	
+
 }

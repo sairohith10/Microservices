@@ -11,15 +11,15 @@ import com.springex.microservice.repository.AddressRepository;
 
 @Service
 public class AddressService {
-	
+
 	@Autowired
 	AddressRepository addressRepository;
 
 	public Address storeAddressDetails(Address address) {
-		
+
 		Address addresssaved = new Address();
 		addresssaved = addressRepository.save(address);
-		
+
 		return addresssaved;
 	}
 
@@ -30,7 +30,7 @@ public class AddressService {
 	public Optional<Address> getAddressById(long id) {
 		Optional<Address> addressfound ;
 		addressfound = addressRepository.findById(id);
-		
+
 		return addressfound;
 	}
 }

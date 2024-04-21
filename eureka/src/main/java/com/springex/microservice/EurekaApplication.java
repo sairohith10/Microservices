@@ -2,12 +2,16 @@ package com.springex.microservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+
 
 @SpringBootApplication
-public class MicroserviceDemo2Application {
+@EnableEurekaServer
+public class EurekaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceDemo2Application.class, args);
+		SpringApplication.run(EurekaApplication.class, args);
 	}
 
 }

@@ -2,12 +2,14 @@ package com.springex.microservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-public class MicroserviceDemo1Application {
+@EnableDiscoveryClient
+public class AddressApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceDemo1Application.class, args);
+		SpringApplication.run(AddressApp.class, args);
 	}
 
 }
