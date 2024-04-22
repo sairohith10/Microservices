@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "80eeb505-f4e8-49ef-b1c4-0f0702684ceb",
+		"name": "microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34055883"
+	},
+	"item": [
+		{
+			"name": "Studentandaddress",
+			"item": [
+				{
+					"name": "http://localhost:8875/student/savedetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"sairohith\",\r\n    \"lastName\":\"ambati\",\r\n    \"emailId\"   :\"rohithsai504@gmail.com\",\r\n    \"addressId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8875/student/savedetails"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8567/address/savedetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"city\":\"hyderabad\",\r\n    \"street\":\"ramkyone\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8566/address/savedetails"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8875/student/id/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8875/student/id/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CurrencyExchange",
+			"item": [
+				{
+					"name": "http://localhost:8005/convert?from=USD&to=INR&value=100",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8005/convert?from=inr&to=irr&value=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"convert"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "inr"
+								},
+								{
+									"key": "to",
+									"value": "irr"
+								},
+								{
+									"key": "value",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8005/convert?from=inr&to=eur&value=1000",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8005/convert?from=inr&to=eur&value=1000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"convert"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "inr"
+								},
+								{
+									"key": "to",
+									"value": "eur"
+								},
+								{
+									"key": "value",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "CurrencyConversion app giving the from(base currency) and to(foreign currency)\n\nand value (no of units of base currency)."
+		}
+	]
+}

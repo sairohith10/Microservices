@@ -19,11 +19,11 @@ public class CurrencyConversionController {
             @RequestParam String to,
             @RequestParam double value
     ) {
-    	ResponseEntity<Double> responseEntity = currencyExchangeService.getConversionRate(from, to);
+    	ResponseEntity<Double> responseEntity = currencyExchangeService.getConversionRate(from.toUpperCase(), to.toUpperCase());
     	if (responseEntity.getStatusCode().is2xxSuccessful()) {
     	    double conversionRate = responseEntity.getBody();
     	    double conversionValue = value * conversionRate;
-    	    return new ConversionResponse(from, to, value, conversionRate, conversionValue);
+    	    return new ConversionResponse(from.toUpperCase(), to.toUpperCase(), value, conversionRate, conversionValue);
     	} else {
     	    // Handle error response
     	    throw new RuntimeException("Failed to get conversion rate. Status code: " + responseEntity.getStatusCodeValue());
