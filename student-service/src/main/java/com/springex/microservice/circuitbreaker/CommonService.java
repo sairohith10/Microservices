@@ -26,7 +26,7 @@ public class CommonService {
 	public AddressResponse getAddressById (long addressId) {
 		logger.info("count = " + count);
 		count++;
-		AddressResponse addressResponse = addressFeignClient.getAddressById(addressId);
+		AddressResponse addressResponse = addressFeignClient.getDetailsById(addressId);
 		
 		return addressResponse;
 	}

@@ -14,5 +14,5 @@ import com.springex.microservice.entity.AddressResponse;
 @FeignClient(name="address-service",value="address-service",path="address")
 public interface AddressFeignClient {
 @GetMapping("/id/{id}")
-public AddressResponse getAddressById(@PathVariable("id") long id);
+public AddressResponse getDetailsById(@PathVariable("id") long id);
 }
